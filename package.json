@@ -1,0 +1,43 @@
+{
+  "name": "ordkun",
+  "version": "0.0.1",
+  "description": "A (WIP) companion extension to Refolk! Inspired by Rikaikun and Yomichan.",
+  "main": "index.js",
+  "source": "src/manifest.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel --target webext-dev --no-hmr",
+    "build": "parcel build src/manifest.json --target webext-prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serverhiccups/ordkun.git"
+  },
+  "author": "serverhiccups",
+  "license": "CC-BY-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/serverhiccups/ordkun/issues"
+  },
+  "homepage": "https://github.com/serverhiccups/ordkun#readme",
+  "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-rc.0",
+    "@parcel/transformer-sass": "^2.0.0-rc.0",
+    "parcel": "^2.0.0-rc.0",
+    "webextension-polyfill": "^0.8.0"
+  },
+  "targets": {
+    "webext-dev": {
+      "sourceMap": {
+        "inline": true,
+        "inlineSources": true
+      }
+    },
+    "webext-prod": {}
+  },
+  "dependencies": {
+    "@parcel/config-webextension": "^2.0.0-rc.0",
+    "@types/mithril": "^2.0.8",
+    "@types/webextension-polyfill": "^0.8.0",
+    "mithril": "^2.0.4"
+  }
+}

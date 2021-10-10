@@ -1,0 +1,86 @@
+@import "fonts/fonts.css";
+
+html, body { // Set the size of the popup window
+    width: 30em;
+    // height: 30em;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    background-color: #f8f8f8;
+}
+
+#not-selected {
+    padding-left: .25rem;
+    padding-right: .25rem;
+}
+
+#add {
+    display: flex;
+    flex-direction: column;
+    & > #info-bar {
+        width: 100%;
+        height: 1.5rem;
+        background-color: #eee;
+        padding-top: .25rem;
+        padding-left: .25rem;
+    }
+}
+
+#key-term {
+    width: calc(100% - .5rem);
+    height: auto;
+    margin-left: .25rem;
+    margin-right: .25rem;
+    margin-bottom: .25rem;
+    & > #key-term-description {
+        font-size: .75rem;
+    }
+    & > input {
+        font-size: 1.5rem;
+        width: 100%;
+        border: 1px solid black;
+        border-radius: .25rem;
+        padding-left: .25rem;
+        padding-right: .25rem;
+    }
+    & > #key-term-suggestions {
+        width: 100%;
+        padding-left: .25rem;
+        padding-right: .25rem;
+        & > .suggestion {
+            font-size: 1.25rem;
+            width: 100%;
+            background-color: white;
+            border: black 1px solid;
+            border-radius: .25rem;
+            margin-top: .25rem;
+            padding-left: .25rem;
+            padding-right: .25rem;
+            cursor: pointer;
+        }
+    }
+}
+
+#translation {
+    width: calc(100% - .5rem);
+    height: auto;
+    margin-left: .25rem;
+    margin-right: .25rem;
+    margin-bottom: .25rem;
+    & > #translation-description {
+        font-size: .75rem;
+    }
+    & > input {
+        font-size: 1.5rem;
+        width: 100%;
+        border: 1px solid black;
+        border-radius: .25rem;
+        padding-left: .25rem;
+        padding-right: .25rem;
+    }
+}
