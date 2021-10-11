@@ -23,5 +23,9 @@
     },
     "background": {
         "scripts": ["background/background.ts"]
-    }
+    },
+    "web_accessible_resources": [
+        "options/options.html"
+    ],
+    "permissions": ["storage"]
 }

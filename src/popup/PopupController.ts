@@ -9,18 +9,12 @@ export class PopupController {
     model: Model;
 
     constructor() {
-        this.model = {
-            wordSelected: false,
-            keyInput: "",
-            keySuggestions: [],
-            translationInput : ""
-        }
         this.port = browser.runtime.connect({name: "popup"});
         this.port.onDisconnect.addListener(() => { // Do something with this?
 
         })
         this.port.onMessage.addListener((message) => {
-            if(message.type == MessageTypes.UPDATE_POPUP) {
+            if(message.type == MessageTypes.UPDATE_MODEL) {
                 this.model = message.content;
                 m.redraw();
             }

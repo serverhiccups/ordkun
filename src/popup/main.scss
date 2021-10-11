@@ -1,4 +1,4 @@
-@import "fonts/fonts.css";
+@import "../fonts/fonts.css";
 
 html, body { // Set the size of the popup window
     width: 30em;
@@ -28,6 +28,10 @@ html, body { // Set the size of the popup window
         background-color: #eee;
         padding-top: .25rem;
         padding-left: .25rem;
+        padding-right: .25rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 

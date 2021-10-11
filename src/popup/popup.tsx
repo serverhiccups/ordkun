@@ -26,6 +26,9 @@ class App {
                 <div id="add">
                     <div id="info-bar">
                         <span>Add to Anki with Ordkun</span>
+                        <span id="settings-link" onclick={(e) => {
+                            browser.tabs.create({url: browser.runtime.getURL("options/options.html")});
+                        }}>⚙️</span>
                     </div>
                     <div id="key-term">
                         <label for="term" id="key-term-description">Term:</label>
